@@ -1,0 +1,24 @@
+{
+  "name": "game-of-life",
+  "version": "1.0.0",
+  "description": "Read about [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) <br/> Used [this tutorial](https://www.youtube.com/watch?v=fcSYAWxV4yc&index=26&t=1910s&list=WL)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexTargonski/the-game-of-life.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexTargonski/the-game-of-life/issues"
+  },
+  "homepage": "https://github.com/AlexTargonski/the-game-of-life#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}

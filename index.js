@@ -1,5 +1,26 @@
-const Grid = require('./src/grid');
+const readlineSync = require('readline-sync');
+const readline     = require('readline');
 
-this.grid = new Grid(60);
+const Grid     = require('./src/grid');
 
-let runnedGame = setInterval(() => { console.log(this.grid.reRender().render()) }, 1000)
+let size = readlineSync.question('Type size of grid:');
+
+let grid;
+
+if (size < 10 || size > 200) {
+  throw "number must be between 0 and 200"
+} else {
+  grid = new Grid(size);
+}
+
+var play = function() {
+  return grid.reRender().render()
+}
+
+let runnedGame = setInterval(() => {
+  let output = play();
+
+   readline.cursorTo(process.stdout, 0, 0);
+   readline.clearScreenDown(process.stdout);
+   process.stdout.write(output);
+}, 1000)
