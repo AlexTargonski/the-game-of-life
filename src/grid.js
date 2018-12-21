@@ -53,7 +53,9 @@ class Grid {
         if (cell.isAlive) {
           if (neighborsQuantity === 2 || neighborsQuantity === 3) {
             newCell.live();
-          } else {
+          } else if (neighborsQuantity < 2) {
+            newCell.die();
+          } else if (neighborsQuantity > 3) {
             newCell.die();
           }
         } else {
@@ -74,7 +76,7 @@ class Grid {
       for (let j = 0; j < this.size; j++) {
         let cell = this.cells[i][j];
         if (cell.isAlive) {
-          output += ' ⃞ ';
+          output += ' ⚪ ';
         } else {
           output += '   ';
         }
